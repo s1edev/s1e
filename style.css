@@ -9,7 +9,7 @@
   --description-color: #333333;
   --tech-tag-bg: rgba(255, 255, 255, 0.8);
   --tech-tag-border: #00cc55;
-  --greeting-color: #00cc55;
+  --greeting-color:   #00cc55;
   --frame-shadow: 0 0 0 2px #fff, 0 0 0 5px rgba(0, 204, 85, 0.3);
   --frame-glow: rgba(0, 204, 85, 0.5);
   --btn-github-bg: #f0f0f0;
@@ -487,5 +487,32 @@ body {
   }
   .portfolio-grid {
     grid-template-columns: 1fr;
+  }
+}
+.btn-portfolio {
+  background-color: transparent;
+  color: var(--text-color);
+  border: 1.5px solid var(--accent-green);
+  box-shadow: 0 4px 12px rgba(0, 204, 85, 0.15);
+}
+
+.btn-portfolio:hover {
+  background-color: var(--accent-green);
+  color: #000000;
+  border-color: var(--accent-green);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 204, 85, 0.3);
+}
+
+/* Темная тема для кнопки портфолио */
+@media (prefers-color-scheme: dark) {
+  .btn-portfolio {
+    color: var(--text-color);
+    border: 1.5px solid var(--accent-green);
+  }
+  
+  .btn-portfolio:hover {
+    background-color: var(--accent-green);
+    color: #000000;
   }
 }
