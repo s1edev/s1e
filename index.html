@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Игорь Сбитнев · backend-разработчик</title>
+  <!-- Подключаем шрифты -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Подключаем стили -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Герой секция -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <!-- Фото слева с приветствием -->
+      <div class="hero-image-wrapper">
+        <div class="greeting-text">
+          <i class="fas fa-circle"></i> ПРИВЕТСТВУЮ <span class="greeting-line"></span>
+        </div>
+        <div class="hero-image">
+          <div class="image-frame">
+            <!-- ЗДЕСЬ РЕАЛЬНОЕ ФОТО (раскомментировать и удалить placeholder) -->
+            <!-- <img src="assets/images/igor-sbitnev.jpg" alt="Игорь Сбитнев"> -->
+            
+            <!-- Placeholder (удалить когда появится фото) -->
+            <div class="placeholder-photo">
+              <i class="fas fa-user-tie"></i>
+              <span>Фото Игоря Сбитнева</span>
+              <small>деловой стиль, тёмный фон</small>
+            </div>
+          </div>
+          <div class="tech-tag">
+            <i class="fas fa-circle"></i> 
+            <span>backend · API · bots</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Текст справа -->
+      <div class="hero-content">
+        <h1 class="name">Игорь Сбитнев</h1>
+        <div class="profession">Backend-разработчик</div>
+        <p class="description">
+          Создание сайтов, API и Telegram-ботов. Надёжные и масштабируемые backend-решения.
+        </p>
+        <div class="button-group">
+          <a href="#" class="btn btn-telegram">
+            <i class="fab fa-telegram-plane"></i> Telegram
+          </a>
+          <a href="#" class="btn btn-github">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+        <div class="hero-tags">
+          <span><i class="fas fa-database" style="color: var(--accent-green);"></i> Высокая нагрузка</span>
+          <span><i class="fas fa-cloud" style="color: var(--accent-red);"></i> Микросервисы</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Портфолио -->
+  <section class="portfolio">
+    <div class="container">
+      <h2 class="section-title"><span>Проекты</span> — боты и API</h2>
+      <div class="portfolio-sub">Решения для автоматизации, оплат и AI</div>
+      
+      <div class="portfolio-grid">
+        <!-- 1. Бот трекер привычек -->
+        <a href="https://github.com/igor/habit-tracker-bot" target="_blank" class="portfolio-card">
+          <div class="card-icon"><i class="fas fa-calendar-check"></i></div>
+          <h3 class="card-title">Tracker Habit Bot</h3>
+          <p class="card-desc">Telegram-бот для отслеживания привычек, ежедневных целей и напоминаний. Статистика, прогресс, интеграция с Google Sheets.</p>
+          <div class="link-indicator">
+            <span>перейти</span> <i class="fas fa-arrow-right"></i>
+          </div>
+        </a>
+
+        <!-- 2. Бот ИИ редактор -->
+        <a href="https://github.com/igor/ai-editor-bot" target="_blank" class="portfolio-card">
+          <div class="card-icon"><i class="fas fa-robot"></i></div>
+          <h3 class="card-title">AI Editor Bot</h3>
+          <p class="card-desc">Бот на базе нейросетей: обработка текста, исправление ошибок, пересказ, генерация идей. Поддержка голосовых сообщений.</p>
+          <div class="link-indicator">
+            <span>перейти</span> <i class="fas fa-arrow-right"></i>
+          </div>
+        </a>
+
+        <!-- 3. Бот для оплаты файлов -->
+        <a href="https://github.com/igor/pay-download-bot" target="_blank" class="portfolio-card">
+          <div class="card-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+          <h3 class="card-title">Pay & Download Bot</h3>
+          <p class="card-desc">Закрытый файлообменник через Telegram: оплата через ЮKassa/Stripe, автоматическая выдача контента, защита ссылок.</p>
+          <div class="link-indicator">
+            <span>перейти</span> <i class="fas fa-arrow-right"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="footer-note">
+    <span>© 2025 Игорь Сбитнев — </span>
+    <a href="#"><i class="fab fa-telegram"></i></a> · <a href="#"><i class="fab fa-github"></i></a>
+    <span style="color: var(--accent-green);"> backend</span><span style="color: var(--accent-red);">•dev</span>
+  </footer>
+
+  <!-- Подключаем скрипт (опционально) -->
+  <script src="script.js"></script>
+</body>
+</html>
