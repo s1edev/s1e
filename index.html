@@ -24,15 +24,7 @@
         </div>
         <div class="hero-image">
           <div class="image-frame">
-            <!-- ЗДЕСЬ РЕАЛЬНОЕ ФОТО (раскомментировать и удалить placeholder) -->
-            <!-- <img src="assets/images/igor-sbitnev.jpg" alt="Игорь Сбитнев"> -->
-            
-            <!-- Placeholder (удалить когда появится фото) -->
-            <div class="placeholder-photo">
-              <i class="fas fa-user-tie"></i>
-              <span>Фото Игоря Сбитнева</span>
-              <small>деловой стиль, тёмный фон</small>
-            </div>
+            <img src="assets/images/igor-sbitnev.jpeg" alt="Игорь Сбитнев">
           </div>
           <div class="tech-tag">
             <i class="fas fa-circle"></i> 
@@ -55,6 +47,10 @@
           <a href="#" class="btn btn-github">
             <i class="fab fa-github"></i> GitHub
           </a>
+          <!-- Новая кнопка портфолио -->
+          <a href="#portfolio" class="btn btn-portfolio">
+            <i class="fas fa-briefcase"></i> Портфолио
+          </a>
         </div>
         <div class="hero-tags">
           <span><i class="fas fa-database" style="color: var(--accent-green);"></i> Высокая нагрузка</span>
@@ -64,8 +60,8 @@
     </div>
   </section>
 
-  <!-- Портфолио -->
-  <section class="portfolio">
+  <!-- Портфолио (добавлен id для якоря) -->
+  <section id="portfolio" class="portfolio">
     <div class="container">
       <h2 class="section-title"><span>Проекты</span> — боты и API</h2>
       <div class="portfolio-sub">Решения для автоматизации, оплат и AI</div>
@@ -111,7 +107,27 @@
     <span style="color: var(--accent-green);"> backend</span><span style="color: var(--accent-red);">•dev</span>
   </footer>
 
-  <!-- Подключаем скрипт (опционально) -->
-  <script src="script.js"></script>
+  <!-- Подключаем скрипт для плавной прокрутки -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Плавная прокрутка для всех якорных ссылок
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
